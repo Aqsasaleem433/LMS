@@ -9,10 +9,10 @@ Route::get('/', function () {
     return view('front.index');
 });
 
-Route::post('/demo-request', [DemoController::class, 'store'])
-    ->name('demo-request');
+// Route::post('/demo-request', [DemoController::class, 'store'])
+//     ->name('demo-request');
 
-Route::get('/admin/demo/{id}/approve', [DemoRequestController::class, 'approve']);
+
 // Route::get('/', function () {
 //     return view('admin.home');
 // })->middleware(['auth', 'verified'])->name('home');
@@ -23,5 +23,6 @@ Route::get('/admin/demo/{id}/approve', [DemoRequestController::class, 'approve']
 //     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
+include 'admin.php';
 
 require __DIR__.'/auth.php';

@@ -1,5 +1,4 @@
-@extends('layout.master')
-@section('content')
+
 <h2>Hi {{ $demo->name }},</h2>
 
 <p>Your demo request has been approved 🎉</p>
@@ -13,4 +12,3 @@
 </a>
 
 <p>Thanks,<br>RealStack CRM Team</p>
-@endsection

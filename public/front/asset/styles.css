@@ -360,6 +360,92 @@ section {
   padding-top: 1.5rem;
   color: #bcbcc4;
 }
+/* dark */
+  body.dark .hero::before {
+  opacity: 0.4;
+}
+#themeToggle {
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+body.dark {
+  --bg: #0f1115;
+  --ink: #f1f1f1;
+  --ink-soft: #b5b5b5;
+
+  --card: rgba(25, 25, 28, 0.75);
+  --glass: rgba(25, 25, 28, 0.6);
+
+  --line: rgba(255, 255, 255, 0.08);
+}
+
+/* APPLY DARK MODE COLORS WITHOUT CHANGING LAYOUT */
+body.dark html,
+body.dark {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* HEADER */
+body.dark .site-header {
+  background: var(--glass);
+  border-bottom: 1px solid var(--line);
+}
+
+/* CARDS ONLY (NO LAYOUT CHANGE) */
+body.dark .hero-panel,
+body.dark .panel-card,
+body.dark .panel-metrics,
+body.dark .step-card,
+body.dark .feature-grid article,
+body.dark .contact-form {
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+/* TEXT COLORS */
+body.dark .nav-links a {
+  color: var(--ink-soft);
+}
+
+/* BUTTON FIX */
+body.dark .btn-outline {
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+/* FOOTER DARK ADJUST */
+body.dark .site-footer {
+  background: linear-gradient(135deg, #1a1a1c, #111111);
+}
+
+/* HERO EFFECT (OPTIONAL VISUAL FIX ONLY) */
+body.dark .hero::before {
+  opacity: 0.25;
+}
+
+/* TOGGLE BUTTON (KEEP GLOBAL, NOT INSIDE MEDIA QUERY) */
+#themeToggle {
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+#themeToggle:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
 
 /* =========================
    RESPONSIVE
@@ -382,4 +468,5 @@ section {
   section {
     padding: 4rem 0;
   }
+
 }

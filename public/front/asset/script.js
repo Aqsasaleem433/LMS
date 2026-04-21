@@ -54,3 +54,46 @@ if (demoForm) {
     demoForm.reset();
   });
 }
+
+// Load saved mode
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark');
+}
+
+// toggleBtn.addEventListener('click', () => {
+//     body.classList.toggle('dark');
+
+    // if (body.classList.contains('dark')) {
+    //     localStorage.setItem('theme', 'dark');
+    //     toggleBtn.innerHTML = '☀️';
+    // } else {
+    //     localStorage.setItem('theme', 'light');
+    //     toggleBtn.innerHTML = '🌙';
+    // }
+
+const toggleBtn = document.getElementById('themeToggle');
+const body = document.body;
+
+if (toggleBtn) {
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+        body.classList.add('dark');
+        toggleBtn.innerHTML = '☀️';
+    } else {
+        toggleBtn.innerHTML = '🌙';
+    }
+
+    // Toggle theme
+    toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark');
+
+        const isDark = body.classList.contains('dark');
+
+        toggleBtn.innerHTML = isDark ? '☀️' : '🌙';
+
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+}

@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
-
+namespace App\Http\Controllers\Controllers;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\DemoRequestController;
+    
 use Dom\Comment;
 use Illuminate\Support\Facades\Route;
 
@@ -17,16 +19,16 @@ Route::group(
         // Route::resource('users', UserController::class)->names('users');
         // Route::resource('roles', RoleController::class)->names('roles');
 
-        // Scholarship management (full CRUD)
-        Route::resource('', ScholarshipController::class);
+      
+// Admin routes
+Route::prefix('admin')->group(function () {
+    Route::get('/demo-requests', [DemoRequestController::class, 'index'])->name('admin.demo');
 
-        // Application review
-        Route::prefix('applications')->name('application_review.')->group(function () {
-            Route::get('/', [ApplicationReviewController::class, 'index'])->name('index');
-            Route::get('{application}', [ApplicationReviewController::class, 'show'])->name('show');
-            Route::patch('{application}/status', [ApplicationReviewController::class, 'updateStatus'])
-                ->name('updateStatus');
-        });
+    Route::get('/demo/{id}/approve', [DemoRequestController::class, 'approve'])->name('admin.demo.approve');
+
+    Route::get('/demo/{id}/reject', [DemoRequestController::class, 'reject'])->name('admin.demo.reject');
+   
+});
 
     }
 );

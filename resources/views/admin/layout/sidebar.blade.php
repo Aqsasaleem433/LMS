@@ -133,7 +133,7 @@
               <span class="menu-header-text">Apps &amp; Pages</span>
             </li>
             <li class="menu-item">
-                  <a href="{{ route('admin.email') }}" class="menu-link">
+                  <a href="{{ route('admin.demo.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-mail"></i>
                 <div data-i18n="Email">Email</div>
               </a>

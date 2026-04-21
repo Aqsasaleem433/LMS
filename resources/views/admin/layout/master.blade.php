@@ -8,7 +8,7 @@
   data-assets-path="../../admin/assets/"
   data-template="vertical-menu-template">
 
- @include('layout.header')
+ @include('admin.layout.header')
 
   <body>
     <!-- Layout wrapper -->
@@ -17,11 +17,11 @@
       
       <div class="layout-container">
         <!-- Menu -->
-        
-        @include('layout.nav')
+
+        @include('admin.layout.nav')
         <!-- Layout container -->
          <div class="layout-page">
- @include('layout.sidebar')
+ @include('admin.layout.sidebar')
           <!-- / Navbar -->
 
           <!-- Content wrapper -->
@@ -885,7 +885,7 @@
             <!-- / Content -->
 
             <!-- Footer -->
-            @include('layout.footer')
+            @include('admin.layout.footer')
             <!-- / Footer -->
 
             <div class="content-backdrop fade"></div>
@@ -904,6 +904,6 @@
     <!-- / Layout wrapper -->
 
     <!-- Core JS -->
-   @include('layout.script')
+   @include('admin.layout.script')
   </body>
 </html>

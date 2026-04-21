@@ -31,6 +31,8 @@
             <a href="#how">How it works</a>
             <a href="#contact">Contact</a>
             <button id="menuBtn" class="menu-btn">Menu</button>
+
+    <button id="themeToggle" class="menu-btn">🌙</button>
         </nav>
 
     </div>
@@ -156,7 +158,7 @@
             </ul>
         </div>
 
-        <form id="demoForm" class="contact-form" method="POST" action="{{ route('demo-request') }}">
+        <form id="demoForm" class="contact-form" method="POST" action="#">
             @csrf
 
             <label>
