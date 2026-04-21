@@ -20,6 +20,7 @@
 <!-- HEADER -->
 <header class="site-header">
     <div class="container nav-wrap">
+        {{-- <img src="{{ asset('front/asset/logo.png') }}" alt=""> --}}
 
         <a class="brand" href="#">RealTech CRM</a>
 
@@ -155,7 +156,8 @@
             </ul>
         </div>
 
-        <form id="demoForm" class="contact-form">
+        <form id="demoForm" class="contact-form" method="POST" action="{{ url('/demo-request') }}">
+            @csrf
 
             <label>
                 Full Name

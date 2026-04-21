@@ -3,11 +3,14 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DemoRequestController;
 
 Route::get('/', function () {
     return view('front.index');
 });
+Route::post('/demo-request', [DemoRequestController::class, 'store']);
 
+Route::get('/admin/demo/{id}/approve', [DemoRequestController::class, 'approve']);
 // Route::get('/', function () {
 //     return view('home');
 // })->middleware(['auth', 'verified'])->name('home');
