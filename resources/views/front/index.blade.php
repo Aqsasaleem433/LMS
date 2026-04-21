@@ -29,7 +29,7 @@
             <a href="#features">Features</a>
             <a href="#how">How it works</a>
             <a href="#contact">Contact</a>
-            <button id="menuBtn" class="menu-btn">M</button>
+            <button id="menuBtn" class="menu-btn">Menu</button>
         </nav>
 
     </div>
