@@ -8,13 +8,15 @@ use App\Http\Controllers\DemoRequestController;
 Route::get('/', function () {
     return view('front.index');
 });
-Route::post('/demo-request', [DemoRequestController::class, 'store']);
+
+Route::post('/demo-request', [DemoController::class, 'store'])
+    ->name('demo-request');
 
 Route::get('/admin/demo/{id}/approve', [DemoRequestController::class, 'approve']);
-Route::get('/', function () {
-    return view('admin.home');
-})->middleware(['auth', 'verified'])->name('home');
-  Route::get('/admin/email', [HomeController::class, 'email'])->name('admin.email');
+// Route::get('/', function () {
+//     return view('admin.home');
+// })->middleware(['auth', 'verified'])->name('home');
+//   Route::get('/admin/email', [HomeController::class, 'email'])->name('admin.email');
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

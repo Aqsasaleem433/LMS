@@ -156,7 +156,7 @@
             </ul>
         </div>
 
-        <form id="demoForm" class="contact-form" method="POST" action="{{ route('front.email') }}">
+        <form id="demoForm" class="contact-form" method="POST" action="{{ route('demo-request') }}">
             @csrf
 
             <label>
