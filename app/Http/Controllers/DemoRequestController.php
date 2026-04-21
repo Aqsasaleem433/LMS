@@ -8,8 +8,16 @@ use Illuminate\Support\Facades\Mail;
 
 class DemoRequestController extends Controller
 {
+  
     public function store(Request $request)
 {
+
+     dd($request->all());
+     $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'message' => 'nullable|string'
+    ]);
     DemoRequest::create([
         'name' => $request->name,
         'email' => $request->email,

@@ -72,7 +72,7 @@
               </ul>
             </li>
 
-            <!-- Layouts -->
+            {{-- <!-- Layouts -->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-layout-sidebar"></i>
@@ -126,19 +126,19 @@
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> --}}
 
             <!-- Apps & Pages -->
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Apps &amp; Pages</span>
             </li>
             <li class="menu-item">
-              <a href="app-email.html" class="menu-link">
+              <a href="{{ route('admin.email') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-mail"></i>
                 <div data-i18n="Email">Email</div>
               </a>
             </li>
-            <li class="menu-item">
+            {{-- <li class="menu-item">
               <a href="app-chat.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-messages"></i>
                 <div data-i18n="Chat">Chat</div>
@@ -234,7 +234,7 @@
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-settings"></i>
                 <div data-i18n="Roles & Permissions">Roles & Permissions</div>
-              </a>
+              </a> --}}
               <ul class="menu-sub">
                 <li class="menu-item">
                   <a href="app-access-roles.html" class="menu-link">
