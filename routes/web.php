@@ -11,9 +11,10 @@ Route::get('/', function () {
 Route::post('/demo-request', [DemoRequestController::class, 'store']);
 
 Route::get('/admin/demo/{id}/approve', [DemoRequestController::class, 'approve']);
-// Route::get('/', function () {
-//     return view('home');
-// })->middleware(['auth', 'verified'])->name('home');
+Route::get('/', function () {
+    return view('admin.home');
+})->middleware(['auth', 'verified'])->name('home');
+  Route::get('/admin/email', [HomeController::class, 'email'])->name('admin.email');
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
