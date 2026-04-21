@@ -21,14 +21,15 @@
 <header class="site-header">
     <div class="container nav-wrap">
 
-        <a class="brand" href="#">RealStack CRM</a>
+        <a class="brand" href="#">RealTech CRM</a>
 
-        <button id="menuBtn" class="menu-btn">Menu</button>
+
 
         <nav id="navMenu" class="nav-links">
             <a href="#features">Features</a>
             <a href="#how">How it works</a>
             <a href="#contact">Contact</a>
+            <button id="menuBtn" class="menu-btn">M</button>
         </nav>
 
     </div>
@@ -184,31 +185,49 @@
 
 <!-- FOOTER -->
 <footer class="site-footer">
-    <div class="container footer-grid">
+  <div class="container footer-grid">
 
-        <div>
-            <h3>RealStack CRM</h3>
-            <p>AI-powered sales automation</p>
-        </div>
-
-        <div>
-            <a href="#">Product</a>
-            <a href="#">Features</a>
-        </div>
-
-        <div>
-            <a href="#">Company</a>
-            <a href="#">Contact</a>
-        </div>
-
-        <div>
-            <a href="#">Legal</a>
-            <a href="#">Privacy</a>
-        </div>
-
+    <!-- COLUMN 1 -->
+    <div class="footer-col">
+      <h3>RealStack CRM</h3>
+      <p>
+        Smart AI-powered CRM that helps businesses automate follow-ups,
+        manage leads, and close deals faster.
+      </p>
     </div>
 
-    <p class="copyright">© 2026 RealStack CRM</p>
+    <!-- COLUMN 2 -->
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a href="#">Features</a>
+      <a href="#">Automation</a>
+      <a href="#">CRM Dashboard</a>
+      <a href="#">Integrations</a>
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="#">Blog</a>
+      <a href="#">Help Center</a>
+      <a href="#">Guides</a>
+      <a href="#">API Docs</a>
+    </div>
+
+    <!-- COLUMN 4 -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 RealStack CRM. All rights reserved.</p>
+  </div>
 </footer>
 
 <!-- JS -->
